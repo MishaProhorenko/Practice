@@ -124,3 +124,154 @@
 // }
 
 // console.log(salary())
+
+
+
+//=======================================================================
+
+
+
+// 1. Запросить у пользователя число и определить, оно положительное, отрицательное или ноль.
+
+
+// let requestNumberFromUser = (number) => {
+//     number = +prompt('enter number');
+//     if (number > 0) {
+//         return 'positive'
+//     } else if (number < 0) {
+//         return 'negative'
+//     } else if (number == 0) {
+//         return 'enter 0'
+//     }
+// }
+
+// console.log(requestNumberFromUser())
+
+
+
+//2. Запросить у пользователя его возраст и проверить корректность введенных данных (0–120 лет).
+
+// let requestAgeFromUser = (age) => {
+//     age = +prompt('enter your age');
+//     if(age > 120 || age < 0){
+//         console.log('ERROR')
+//         age = +prompt('enter your age');
+//         if(age < 120 || age > 0){
+//             return `Your age: ${age}`
+//         }
+//     } else{
+//         return `Your age: ${age}`
+//     }
+// }
+// console.log(requestAgeFromUser())
+
+//3.Запросить у пользователя число и вывести его модуль
+// (|7| = 7, |-7| = 7).
+
+// let requestNumber = (number) => {
+//     number = +prompt('enter number');
+//     return Math.abs(number)
+// }
+// console.log(requestNumber())
+
+//4. Запросить у пользователя время (часы, минуты, секунды)
+// и проверить корректность введенных данных
+
+// let requestTime = (hour, minute, second) => {
+//     hour = +prompt('enter hour');
+//     if (hour > 24 || hour < 0) {
+//         return `Неверно введены часы`
+//     } else {
+//         minute = +prompt('enter minute');
+//         if (minute >= 60 || minute < 0) {
+//             return `Неверно введены минуты`
+//         } else {
+//             second = +prompt('enter second');
+//             if (second >= 60 || second < 0) {
+//                 return `Неверно введены секунды`
+//             } else {
+//                 return `сейчас: ${hour}:${minute}:${second}`
+//             }
+//         }
+//     }
+// }
+
+// console.log(requestTime())
+
+//5.Запросить у пользователя номер месяца и вывести на экран
+// его название.
+
+// let numberMonth = (number) => {
+//     number = +prompt('enter number month');
+//     switch (number) {
+//         case 1:
+//             console.log('1')
+//             break;
+//         case 2:
+//             console.log('2')
+//             break;
+//         case 3:
+//             console.log('3')
+//             break;
+//         case 4:
+//             console.log('4')
+//             break;
+//         case 5:
+//             console.log('5')
+//             break;
+//         case 6:
+//             console.log('6')
+//             break;
+//         case 7:
+//             console.log('7')
+//             break;
+//         case 8:
+//             console.log('8')
+//             break;
+//         case 9:
+//             console.log('9')
+//             break;
+//         case 10:
+//             console.log('10')
+//             break;
+//         case 11:
+//             console.log('11')
+//             break;
+//         case 12:
+//             console.log('12')
+//             break;
+//         default:
+//             console.log('ERROR')
+//     }
+// }
+// numberMonth()
+
+//6. Запросить 2 числа и вывести большее из них
+
+// let requestTwoNumber = (numberOne, numberTwo)=>{
+//     numberOne = +prompt('enter first number');
+//     numberTwo = +prompt('enter second number');
+//     numberOne > numberTwo ? console.log(numberOne): console.log(numberTwo)
+// }
+
+// requestTwoNumber()
+
+// 7. Запросить 1 число и проверить, оно кратно 5 или нет
+
+// let checkNumber = (number) => {
+//     number = +prompt('enter number')
+//     number % 5 === 0 ? console.log('кратно 5') : console.log('error')
+// }
+
+// checkNumber()
+
+//8.Запросить у пользователя название планеты. Если пользователь ввел «Земля» или «земля», то вывести «Привет,
+// землянин!», в остальных случаях вывести «Привет, инопланетянин!». 
+
+// let checkHuman = (planet) => {
+//     planet = prompt('enter your planet');
+//     planet === 'Земля' || planet === 'земля' ? console.log('Привет,землянин!') :
+//     console.log('Привет,инопланетянин!')
+// }
+
+// checkHuman()
