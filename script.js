@@ -477,3 +477,19 @@
 // console.log(result('23','03','1996'))
 
 
+//===================================
+
+// let offset = 0;
+// function move() {
+//     document.querySelector('.block').style.margin = offset + 'px';
+//     offset = offset + 5;
+//     if(offset > 100){
+//         return true
+//     }
+//     setTimeout(move , 300);
+//     ;
+// }
+
+// document.querySelector('button').onclick = move;
+//=====================================================
+
