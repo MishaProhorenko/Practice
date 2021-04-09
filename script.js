@@ -370,3 +370,110 @@
 // }
 // rangeCycle()
 
+//====================================================
+
+// 1. Написать функцию, которая принимает 2 числа и возвращает меньшее из них
+
+// let minNumber = (numberOne, numberTwo) => {
+//      if(numberOne > numberTwo){
+//          return numberTwo
+//      }
+//      if(numberOne < numberTwo){
+//         return numberOne
+//     }
+// }
+// console.log(minNumber(100,50))
+
+//2.Написать функцию, которая возводит переданное число
+// в указанную степень.
+
+// let numberInLevel = (number, level) => {
+//     return number ** level
+// }
+// console.log(numberInLevel(2,2))
+
+//3. Написать функцию, которая принимает 2 числа и знак
+// (+ - * /), считает пример и возвращает результат.
+
+// let resultExpression = (numberOne, numberTwo, operator) => {
+//     if (operator == '+') {
+//         return numberOne + numberTwo
+//     }
+//     if (operator == '-') {
+//         return numberOne - numberTwo
+//     }
+//     if (operator == '*') {
+//         return numberOne * numberTwo
+//     }
+//     if (operator == '/') {
+//         return numberOne / numberTwo
+//     }
+// }
+// console.log(resultExpression(25,2,'/'))
+
+
+//5.Написать функцию, которая принимает число и выводит
+// таблицу умножения для этого числа. Вызовите функцию
+// для всех чисел от 2 до 9.
+
+// let tableMulti = (number) => {
+//     for (let i = 1; i <= 9; i++){
+//         console.log(`${number} * ${i} = ${number * i}`)
+//     }
+// }
+// tableMulti(2)
+// tableMulti(3)
+// tableMulti(4)
+// tableMulti(5)
+// tableMulti(6)
+// tableMulti(7)
+// tableMulti(8)
+// tableMulti(9)
+
+//6.Написать функцию, которая принимает от 1 до 5 чисел и
+// возвращает их сумму.
+// let resultSum = (numberOne = 0, numberTwo = 0, numberThree = 0, numberFour = 0, numberFive = 0) => {
+//     return numberOne + numberTwo + numberThree + numberFour + numberFive
+// }
+// console.log(resultSum(2,10,100))
+
+//7.Написать функцию, которая принимает от 1 до 5 чисел и
+// возвращает большее из них.
+// let maxNumber = (a,b,c,d,e) => {
+// return Math.max(+a,+b,+c,+d,+e)
+// }
+// console.log(maxNumber(10,5,111111,15,1000))
+
+//8.Написать функцию, которая выводит все четные или не-
+// четные числа, в указанном пользователем диапазоне. Какие
+// числа выводить, определяется третьим параметром типа
+// b o ol ( true – четные, false – нечетные).
+// let positiveOrNegativeNumbers = (start, end, bool) => {
+//     if (bool === false) {
+//         for (let i = start; i < end; i++) {
+//             if (i % 2 !== 0) {
+//                 console.log(i)
+//             }
+//         }
+//     } else if (bool === true) {
+//         for (let i = start; i < end; i++) {
+//             if (i % 2 === 0) {
+//                 console.log(i)
+//             }
+//         }
+//     }
+// }
+// positiveOrNegativeNumbers(10, 50, false)
+
+//9.Написать функцию, которая принимает дату (день, месяц,
+// год) и возвращает дату следующего дня в виде строки
+// «дд.мм.гггг». Проверку на високосный год желательно
+// написать отдельной функцией.
+
+// let result = (date, month, year) => {
+//     let newDate = +date + 1
+// return `${newDate}.${month}.${year}`
+// }
+// console.log(result('23','03','1996'))
+
+
