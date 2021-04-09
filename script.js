@@ -275,3 +275,98 @@
 // }
 
 // checkHuman()
+
+
+//======================================================================
+
+//1. Вывести # столько раз, сколько указал пользователь.
+
+// let showResult = (number) => {
+//     number = +prompt('enter number');
+//     for (let i = 0; i < number; i++){
+//         console.log('#')
+//     }
+// }
+// showResult()
+
+
+// 2. Пользователь ввел число, а на экран вывелись все числа
+// от введенного до 0.
+
+// let range = (number) => {
+//     number = +prompt('enter number');      
+//     for (let i = 0; i <= number; number--) {
+//         console.log(number)        
+//     }
+// }
+// range()
+
+//3. Запросить число и степень. Возвести число в указанную
+// степень и вывести результат.
+
+// let requestNumberAndLevel = (number, level) => {
+//     number = +prompt('enter number');
+//     level = +prompt('enter level');
+//     return number ** level
+// }
+// console.log(requestNumberAndLevel())
+
+//4.Предлагать пользователю решить пример 2 + 2 * 2 до тех
+// пор, пока он не решит его правильно.
+
+// let result = (answer) => {
+//     answer = +prompt('enter answer 2 + 2 * 2', 6)
+//     for(;;){
+//         if(answer === 6){
+//            return 'Good'            
+//         } else{
+//             answer = +prompt('enter answer 2 + 2 * 2', 6)
+//         }
+//     }
+// }
+
+// console.log(result())
+
+//5. Делить число 1000 на 2 до тех пор, пока не получится число
+// меньше 50. Вывести это число и сколько делений произвели.
+
+
+
+// let result = 1000; 
+// let count = 0;
+// while (result > 50) {
+//     result = result / 2
+//     count++    
+// }
+// console.log(`Произвели ${count} делений, последнее число: ${result}`)
+
+//6. Вывести все числа от 1 до 100, которые кратные указанному
+// пользователем числу
+
+// let rangeNumbers = (numberFromUser)=>{
+//     numberFromUser = +prompt('enter number')
+//     for (let i = 1; i < 100; i++) {
+//         if(i % numberFromUser === 0){
+//             console.log(i)
+//         }        
+//     }
+// }
+// rangeNumbers()
+
+//7.Вывести каждый 4-й элемент из указанного пользователем
+// диапазона. Пользователь указывает минимальное и мак-
+// симальное значения диапазона.
+
+// let rangeCycle = (min, max) => {
+//     let count = 0;
+//     min = +prompt('enter start range cycle')
+//     max = +prompt('enter end range cycle')
+//     for (let i = min; min < max; i++) {
+//         count++
+//         if (count % 4 === 0) {
+//             console.log(i)
+//         }
+//     }
+// }
+// rangeCycle()
+
