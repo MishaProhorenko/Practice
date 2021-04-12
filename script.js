@@ -493,10 +493,122 @@
 // document.querySelector('button').onclick = move;
 //=====================================================
 
-//1. Написать функцию, которая вычисляет факториал задан-
-// ного числа.
-function factorial(n) {
-    return (n != 1) ? n * factorial(n - 1) : 1;
+const arrayRandomNumbers = [2, 4, 6, 12, 89123, 56, 87, 23, 111, 678]
+
+//1. Функция принимает массив и выводит его на экран.
+
+// let showArray = (arr) => {
+//   alert(arr)
+// }
+// showArray(arrayRandomNumbers)
+
+//2. Функция принимает массив и выводит только четные
+// элементы.
+
+// let showEvenElement = (arr) => {
+//   for (let i = 0; i < arr.length; i++) {
+//     if(arr[i] % 2 === 0){
+//       console.log(arr[i])
+//     }    
+//   }
+// }
+// showEvenElement(arrayRandomNumbers)
+
+//3. Функция принимает массив и возвращает сумму всех
+// элементов массива.
+
+// let sumAllElement = (arr) => {
+//   let sum = 0;
+//   for (let i = 0; i < arr.length; i++) {
+//     const element = arr[i];
+//     sum = sum + element
+//   }
+//   return sum
+// }
+
+// console.log(sumAllElement(arrayRandomNumbers))
+
+//4.Функция принимает массив и возвращает его максималь-
+// ный элемент.
+
+
+//===============================================
+//tasks from learn .js
+
+// const styles = ['Джаз','Блюз'];
+// console.log(styles)
+
+// styles.push('Rock-n-roll')
+// console.log(styles)
+
+// styles[Math.floor((styles.length - 1) / 2)] = 'Классика';
+// console.log(styles)
+
+// styles.shift(styles[0])
+// console.log(styles)
+
+// styles.unshift('Рэп', 'Регги')
+// console.log(styles)
+
+// Напишите функцию sumInput(), которая:
+
+// Просит пользователя ввести значения, используя prompt и сохраняет их в массив.
+// Заканчивает запрашивать значения, когда пользователь введёт не числовое значение, пустую строку или нажмёт «Отмена».
+// Подсчитывает и возвращает сумму элементов массива.
+// P.S. Ноль 0 – считается числом, не останавливайте ввод значений при вводе «0».
+
+// let sumInput = () => {
+//   let requestForUser;
+//   let array = []
+//   for (; ;) {
+//     requestForUser = prompt('enter numbers');
+//     if (requestForUser !== null && requestForUser !== '' && isFinite(requestForUser)) {
+//       array.push(+requestForUser)
+//     } else {
+//       break
+//     }
+//   }
+//   let sum = 0
+//   for (let val of array) {
+//     sum += val
+//   }
+//   return sum
+// }
+
+// console.log(sumInput())
+// Задача: найти непрерывный подмассив в arr, сумма элементов в котором максимальна.
+
+// Функция getMaxSubSum(arr) должна возвращать эту сумму.
+
+let array = [1, -2, 3, 4, -9, 6]
+//некорректно
+let getMaxSubSum1 = (arr) => {
+  let newArr = [];
+  let sum = 0;
+  for (let number of arr) {
+    if (number >= 0) {
+      newArr.push(number)
+    }
   }
-  
-  alert( factorial(5) );
+  for (let val of newArr) {
+    sum += val
+  }
+  return sum
+}
+
+alert( getMaxSubSum1([100, -9, 2, -3, 5]) )
+
+//корректно
+function getMaxSubSum2(arr) {
+  let maxSum = 0;
+  let partialSum = 0;
+
+  for (let item of arr) { // для каждого элемента массива
+    partialSum += item; // добавляем значение элемента к partialSum
+    maxSum = Math.max(maxSum, partialSum); // запоминаем максимум на данный момент
+    if (partialSum < 0) partialSum = 0; // ноль если отрицательное
+  }
+
+  return maxSum;
+}
+alert( getMaxSubSum2([100, -9, 2, -3, 5]) )
