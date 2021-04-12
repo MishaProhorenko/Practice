@@ -580,35 +580,36 @@ const arrayRandomNumbers = [2, 4, 6, 12, 89123, 56, 87, 23, 111, 678]
 
 // Функция getMaxSubSum(arr) должна возвращать эту сумму.
 
-let array = [1, -2, 3, 4, -9, 6]
-//некорректно
-let getMaxSubSum1 = (arr) => {
-  let newArr = [];
-  let sum = 0;
-  for (let number of arr) {
-    if (number >= 0) {
-      newArr.push(number)
-    }
-  }
-  for (let val of newArr) {
-    sum += val
-  }
-  return sum
-}
+// let array = [1, -2, 3, 4, -9, 6]
+// //некорректно
+// let getMaxSubSum1 = (arr) => {
+//   let newArr = [];
+//   let sum = 0;
+//   for (let number of arr) {
+//     if (number >= 0) {
+//       newArr.push(number)
+//     }
+//   }
+//   for (let val of newArr) {
+//     sum += val
+//   }
+//   return sum
+// }
 
-alert( getMaxSubSum1([100, -9, 2, -3, 5]) )
+// alert( getMaxSubSum1([100, -9, 2, -3, 5]) )
 
-//корректно
-function getMaxSubSum2(arr) {
-  let maxSum = 0;
-  let partialSum = 0;
+// //корректно
+// function getMaxSubSum2(arr) {
+//   let maxSum = 0;
+//   let partialSum = 0;
 
-  for (let item of arr) { // для каждого элемента массива
-    partialSum += item; // добавляем значение элемента к partialSum
-    maxSum = Math.max(maxSum, partialSum); // запоминаем максимум на данный момент
-    if (partialSum < 0) partialSum = 0; // ноль если отрицательное
-  }
+//   for (let item of arr) { // для каждого элемента массива
+//     partialSum += item; // добавляем значение элемента к partialSum
+//     maxSum = Math.max(maxSum, partialSum); // запоминаем максимум на данный момент
+//     if (partialSum < 0) partialSum = 0; // ноль если отрицательное
+//   }
 
-  return maxSum;
-}
-alert( getMaxSubSum2([100, -9, 2, -3, 5]) )
+//   return maxSum;
+// }
+// alert( getMaxSubSum2([100, -9, 2, -3, 5]) )
+
