@@ -615,53 +615,39 @@ const arrayRandomNumbers = [2, 4, 6, 12, 89123, 56, 87, 23, 111, 678]
 
 // let arr = [1, 3, 4, 6, 10, 123]
 
+function addErrorClass(elementId) {
+    let element = document.getElementById(elementId);
+    element.className = 'error-input';
+}
+
+function addErrorClasssToAllInput() {
+    addErrorClass('first-name');
+    addErrorClass('last-name');
+    addErrorClass('address');
+}
 
 
-let firstNameEl;
+function addDefaultStyleInput(elementId) {
+    let element = document.getElementById(elementId);
+    element.className = 'default-input'
+}
 
-firstNameEl = document.getElementById('first-name');
+function AddDefault() {
+    addDefaultStyleInput('first-name')
+}
 
-window.console.log(firstNameEl.value);
-window.console.log(firstNameEl.className);
 
-firstNameEl.value = 'Kirill'
+// addErrorClass('last-name')
 
-//======================================
-let lastNameEl;
-lastNameEl = document.getElementById('last-name');
+// setTimeout(addErrorClasssToAllInput, 1000);
 
-window.console.log(lastNameEl.value);
-window.console.log(lastNameEl.className);
+// addErrorClasssToAllInput;
 
-lastNameEl.className = 'default-input error-input'
-//======================================
-let addressEl;
-addressEl = document.getElementById('address');
+let sendButton = document.getElementById('send-button');
 
-window.console.log(addressEl.value);
-//======================================
+sendButton.addEventListener('click', addErrorClasssToAllInput )
 
-let citiesEl;
-citiesEl = document.getElementById('cities')
 
-console.log(citiesEl.value)
-console.log(citiesEl.innerHTML)
+let sendButton2 = document.getElementById('send-button2')
 
-//======================================
-let hobbiesEl;
-hobbiesEl = document.getElementById('hobbies')
-
-console.log(hobbiesEl.value)
-
-console.log(hobbiesEl.innerHTML)
-
-//======================================
-let avatarWrapperId = document.getElementById('avatar-wrapper')
-
-console.log(avatarWrapperId.innerHTML)
-
-//======================================
-let myAvatarEl = document.getElementById('my-avatar')
-
-console.log(myAvatarEl.src)
-console.log(myAvatarEl.alt)
+sendButton2.addEventListener('click', AddDefault)
