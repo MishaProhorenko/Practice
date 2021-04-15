@@ -613,3 +613,55 @@ const arrayRandomNumbers = [2, 4, 6, 12, 89123, 56, 87, 23, 111, 678]
 // }
 // alert( getMaxSubSum2([100, -9, 2, -3, 5]) )
 
+// let arr = [1, 3, 4, 6, 10, 123]
+
+
+
+let firstNameEl;
+
+firstNameEl = document.getElementById('first-name');
+
+window.console.log(firstNameEl.value);
+window.console.log(firstNameEl.className);
+
+firstNameEl.value = 'Kirill'
+
+//======================================
+let lastNameEl;
+lastNameEl = document.getElementById('last-name');
+
+window.console.log(lastNameEl.value);
+window.console.log(lastNameEl.className);
+
+lastNameEl.className = 'default-input error-input'
+//======================================
+let addressEl;
+addressEl = document.getElementById('address');
+
+window.console.log(addressEl.value);
+//======================================
+
+let citiesEl;
+citiesEl = document.getElementById('cities')
+
+console.log(citiesEl.value)
+console.log(citiesEl.innerHTML)
+
+//======================================
+let hobbiesEl;
+hobbiesEl = document.getElementById('hobbies')
+
+console.log(hobbiesEl.value)
+
+console.log(hobbiesEl.innerHTML)
+
+//======================================
+let avatarWrapperId = document.getElementById('avatar-wrapper')
+
+console.log(avatarWrapperId.innerHTML)
+
+//======================================
+let myAvatarEl = document.getElementById('my-avatar')
+
+console.log(myAvatarEl.src)
+console.log(myAvatarEl.alt)

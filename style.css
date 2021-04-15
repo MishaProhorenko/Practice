@@ -1,5 +1,8 @@
-.block{
-    width: 100px;
-    height: 100px;
-    background-color: aqua;
+.default-input{
+    border: green 6px solid;
+    padding: 5px;
+}
+
+.error-input{
+    border-color: red;
 }
