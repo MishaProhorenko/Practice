@@ -663,44 +663,30 @@ let number2 = document.getElementById('number2');
 
 
 let makeOperation = (operator) => {
+    let getNumber1 = +number1.value;
+    let getNumber2 = +number2.value;
     let result;
     if (operator == '+') {
-        result = +getNumber1() + +getNumber2();
+        result = +getNumber1 + +getNumber2;
     } else if (operator == '-') {
-        result = +getNumber1() - +getNumber2();
+        result = +getNumber1 - +getNumber2;
     } else if (operator == '*') {
-        result = +getNumber1() * +getNumber2();
+        result = +getNumber1 * +getNumber2;
     } else if (operator == '/') {
-        result = +getNumber1() / +getNumber2();
+        result = +getNumber1 / +getNumber2;
     }
 
     let getIdResult = document.getElementById('resultCalulators');
     getIdResult.innerHTML = result;
 }
 
-let getNumber1 = () => {
-    return +number1.value;
+let onOperationButtonClick = (eventObject) => {
+    let clicketElement = eventObject.currentTarget;
+    let operation = clicketElement.innerHTML
+    makeOperation(operation)
 }
 
-let getNumber2 = () => {
-    return +number2.value;
-}
-
-let onButtonPlusClick = () => {
-    makeOperation('+')
-
-}
-let onButtonMinusClick = () => {
-    makeOperation('-')
-}
-let onButtonMultiplyClick = () => {
-    makeOperation('/')
-}
-let onButtonDevClick = () => {
-    makeOperation('*')
-}
-
-operatorPlus.addEventListener('click', onButtonPlusClick)
-operatorMinus.addEventListener('click', onButtonMinusClick)
-operatorMultiply.addEventListener('click', onButtonMultiplyClick)
-operatorDev.addEventListener('click', onButtonDevClick)
+operatorPlus.addEventListener('click', onOperationButtonClick)
+operatorMinus.addEventListener('click', onOperationButtonClick)
+operatorMultiply.addEventListener('click', onOperationButtonClick)
+operatorDev.addEventListener('click', onOperationButtonClick)
