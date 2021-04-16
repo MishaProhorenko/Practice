@@ -653,71 +653,52 @@ const arrayRandomNumbers = [2, 4, 6, 12, 89123, 56, 87, 23, 111, 678]
 // sendButton2.addEventListener('click', addDefaultStyleInput)
 
 
-let operatorPlus = document.getElementById('operatorPlus')
-let operatorMinus = document.getElementById('operatorMinus')
-let operatorMultiply = document.getElementById('operatorMultiply')
-let operatorDev = document.getElementById('operatorDev')
+let operatorPlus = document.getElementById('operatorPlus');
+let operatorMinus = document.getElementById('operatorMinus');
+let operatorMultiply = document.getElementById('operatorMultiply');
+let operatorDev = document.getElementById('operatorDev');
+
+let number1 = document.getElementById('number1');
+let number2 = document.getElementById('number2');
 
 
+let makeOperation = (operator) => {
+    let result;
+    if (operator == '+') {
+        result = +getNumber1() + +getNumber2();
+    } else if (operator == '-') {
+        result = +getNumber1() - +getNumber2();
+    } else if (operator == '*') {
+        result = +getNumber1() * +getNumber2();
+    } else if (operator == '/') {
+        result = +getNumber1() / +getNumber2();
+    }
 
+    let getIdResult = document.getElementById('resultCalulators');
+    getIdResult.innerHTML = result;
+}
 
+let getNumber1 = () => {
+    return +number1.value;
+}
+
+let getNumber2 = () => {
+    return +number2.value;
+}
 
 let onButtonPlusClick = () => {
-    let number1 = document.getElementById('number1')
-    let number2 = document.getElementById('number2')
-
-    let getValueNumber1 = number1.value;
-    let getValueNumber2 = number2.value;
-
-    let getIdResult = document.getElementById('resultCalulators')
-
-    let result = +getValueNumber1 + +getValueNumber2
-
-    getIdResult.innerHTML = result;
+    makeOperation('+')
 
 }
 let onButtonMinusClick = () => {
-    let number1 = document.getElementById('number1')
-    let number2 = document.getElementById('number2')
-
-    let getValueNumber1 = number1.value;
-    let getValueNumber2 = number2.value;
-
-    let getIdResult = document.getElementById('resultCalulators')
-
-    let result = +getValueNumber1 - +getValueNumber2
-
-    getIdResult.innerHTML = result;
+    makeOperation('-')
 }
 let onButtonMultiplyClick = () => {
-    let number1 = document.getElementById('number1')
-    let number2 = document.getElementById('number2')
-
-    let getValueNumber1 = number1.value;
-    let getValueNumber2 = number2.value;
-
-    let getIdResult = document.getElementById('resultCalulators')
-
-    let result = +getValueNumber1 * +getValueNumber2
-
-    getIdResult.innerHTML = result;
+    makeOperation('/')
 }
 let onButtonDevClick = () => {
-    let number1 = document.getElementById('number1')
-    let number2 = document.getElementById('number2')
-
-    let getValueNumber1 = number1.value;
-    let getValueNumber2 = number2.value;
-
-    let getIdResult = document.getElementById('resultCalulators')
-
-    let result = +getValueNumber1 / +getValueNumber2
-
-    getIdResult.innerHTML = result;
+    makeOperation('*')
 }
-
-
-
 
 operatorPlus.addEventListener('click', onButtonPlusClick)
 operatorMinus.addEventListener('click', onButtonMinusClick)
