@@ -615,39 +615,111 @@ const arrayRandomNumbers = [2, 4, 6, 12, 89123, 56, 87, 23, 111, 678]
 
 // let arr = [1, 3, 4, 6, 10, 123]
 
-function addErrorClass(elementId) {
-    let element = document.getElementById(elementId);
-    element.className = 'error-input';
+// function addErrorClass(elementId) {
+//     let element = document.getElementById(elementId);
+//     element.className = 'error-input';
+// }
+
+// function addErrorClasssToAllInput() {
+//     addErrorClass('first-name');
+//     addErrorClass('last-name');
+//     addErrorClass('address');
+// }
+
+
+// function addDefaultStyleInput(elementId) {
+//     let element = document.getElementById(elementId);
+//     element.className = 'default-input'
+// }
+
+// function AddDefault() {
+//     addDefaultStyleInput('first-name')
+// }
+
+
+// // addErrorClass('last-name')
+
+// // setTimeout(addErrorClasssToAllInput, 1000);
+
+// // addErrorClasssToAllInput;
+
+// let sendButton = document.getElementById('send-button');
+
+// sendButton.addEventListener('click', addErrorClasssToAllInput )
+
+
+// let sendButton2 = document.getElementById('send-button2')
+
+// sendButton2.addEventListener('click', addDefaultStyleInput)
+
+
+let operatorPlus = document.getElementById('operatorPlus')
+let operatorMinus = document.getElementById('operatorMinus')
+let operatorMultiply = document.getElementById('operatorMultiply')
+let operatorDev = document.getElementById('operatorDev')
+
+
+
+
+
+let onButtonPlusClick = () => {
+    let number1 = document.getElementById('number1')
+    let number2 = document.getElementById('number2')
+
+    let getValueNumber1 = number1.value;
+    let getValueNumber2 = number2.value;
+
+    let getIdResult = document.getElementById('resultCalulators')
+
+    let result = +getValueNumber1 + +getValueNumber2
+
+    getIdResult.innerHTML = result;
+
+}
+let onButtonMinusClick = () => {
+    let number1 = document.getElementById('number1')
+    let number2 = document.getElementById('number2')
+
+    let getValueNumber1 = number1.value;
+    let getValueNumber2 = number2.value;
+
+    let getIdResult = document.getElementById('resultCalulators')
+
+    let result = +getValueNumber1 - +getValueNumber2
+
+    getIdResult.innerHTML = result;
+}
+let onButtonMultiplyClick = () => {
+    let number1 = document.getElementById('number1')
+    let number2 = document.getElementById('number2')
+
+    let getValueNumber1 = number1.value;
+    let getValueNumber2 = number2.value;
+
+    let getIdResult = document.getElementById('resultCalulators')
+
+    let result = +getValueNumber1 * +getValueNumber2
+
+    getIdResult.innerHTML = result;
+}
+let onButtonDevClick = () => {
+    let number1 = document.getElementById('number1')
+    let number2 = document.getElementById('number2')
+
+    let getValueNumber1 = number1.value;
+    let getValueNumber2 = number2.value;
+
+    let getIdResult = document.getElementById('resultCalulators')
+
+    let result = +getValueNumber1 / +getValueNumber2
+
+    getIdResult.innerHTML = result;
 }
 
-function addErrorClasssToAllInput() {
-    addErrorClass('first-name');
-    addErrorClass('last-name');
-    addErrorClass('address');
-}
 
 
-function addDefaultStyleInput(elementId) {
-    let element = document.getElementById(elementId);
-    element.className = 'default-input'
-}
 
-function AddDefault() {
-    addDefaultStyleInput('first-name')
-}
-
-
-// addErrorClass('last-name')
-
-// setTimeout(addErrorClasssToAllInput, 1000);
-
-// addErrorClasssToAllInput;
-
-let sendButton = document.getElementById('send-button');
-
-sendButton.addEventListener('click', addErrorClasssToAllInput )
-
-
-let sendButton2 = document.getElementById('send-button2')
-
-sendButton2.addEventListener('click', AddDefault)
+operatorPlus.addEventListener('click', onButtonPlusClick)
+operatorMinus.addEventListener('click', onButtonMinusClick)
+operatorMultiply.addEventListener('click', onButtonMultiplyClick)
+operatorDev.addEventListener('click', onButtonDevClick)

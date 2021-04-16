@@ -1,8 +1,65 @@
-.default-input{
-    border: green 6px solid;
-    padding: 5px;
+.wrapper {
+    margin: 0 auto;
+    width: 500px;
+    height: 500px;
+    border: 1px solid rgb(134, 71, 71);
+    background-color: rgb(174, 243, 147);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
 
-.error-input{
-    border-color: red;
+.operators {
+    height: 30%;
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.operators button {
+    width: 22%;
+    height: 32%;
+    font-size: 40px;
+    color: lightgray;
+    background: #000;
+}
+
+.result {
+    height: 15%;
+    width: 65%;
+    background-color: #fff;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.numbers {
+    height: 30%;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.number {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.number label {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.number input {
+    height: 40px;
+    width: 90%;
+    font-size: 40px;
+    text-align: center;
 }
