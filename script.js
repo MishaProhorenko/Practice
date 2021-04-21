@@ -653,10 +653,10 @@ const arrayRandomNumbers = [2, 4, 6, 12, 89123, 56, 87, 23, 111, 678]
 // sendButton2.addEventListener('click', addDefaultStyleInput)
 
 
-let operatorPlus = document.getElementById('operatorPlus');
-let operatorMinus = document.getElementById('operatorMinus');
-let operatorMultiply = document.getElementById('operatorMultiply');
-let operatorDev = document.getElementById('operatorDev');
+
+let arrayOfButtons = document.getElementsByClassName('operation-button')
+
+console.log(arrayOfButtons)
 
 let number1 = document.getElementById('number1');
 let number2 = document.getElementById('number2');
@@ -681,12 +681,23 @@ let makeOperation = (operator) => {
 }
 
 let onOperationButtonClick = (eventObject) => {
+
     let clicketElement = eventObject.currentTarget;
     let operation = clicketElement.innerHTML
     makeOperation(operation)
 }
 
-operatorPlus.addEventListener('click', onOperationButtonClick)
-operatorMinus.addEventListener('click', onOperationButtonClick)
-operatorMultiply.addEventListener('click', onOperationButtonClick)
-operatorDev.addEventListener('click', onOperationButtonClick)
+let addCommonEventListener = (i) => {
+    arrayOfButtons[i].addEventListener('click', onOperationButtonClick);
+}
+
+for (let i = 0; i < arrayOfButtons.length; i++) {
+    addCommonEventListener(i);
+}
+
+
+
+
+
+
+
